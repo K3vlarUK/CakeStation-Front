@@ -12,9 +12,9 @@ const CakeDetails = (props) => {
         props.onDelete(props.cake.id)
     }
 
-    const addToFavourite = (cake) => {
-        localStorage.setItem(cake.name, cake)
-        alert(cake.name + " has been added to your favourites")
+    const addToFavourite = () => {
+        localStorage.setItem(props.cake.name, props.cake)
+        alert(props.cake.name + " has been added to your favourites")
     }
 
     const editUrl = "/cakes/edit/" + props.cake.id
@@ -26,7 +26,7 @@ const CakeDetails = (props) => {
             <Link to={editUrl}>
                 <button type="button">Edit {props.cake.name}</button>
             </Link>
-            <button className="favourite" onClick={addToFavourite(props.cake)}>Add To Favourites</button>
+            <button className="favourite" onClick={addToFavourite()}>Add To Favourites</button>
         </div>
      );
 }
