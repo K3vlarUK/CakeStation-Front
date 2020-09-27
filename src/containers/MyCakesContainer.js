@@ -6,7 +6,6 @@ class MyCakesContainer extends Component {
         this.state = { 
             favCakes: []
         }
-        this.removeFromStorage = this.removeFromStorage.bind(this)
     }
 
     componentDidMount() {
