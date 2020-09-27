@@ -26,7 +26,7 @@ const CakeDetails = (props) => {
             <Link to={editUrl}>
                 <button type="button">Edit {props.cake.name}</button>
             </Link>
-            <button className="favourite" onClick={addToFavourite(cake)}>Add To Favourites</button>
+            <button className="favourite" onClick={addToFavourite(props.cake)}>Add To Favourites</button>
         </div>
      );
 }
