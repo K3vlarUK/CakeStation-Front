@@ -13,12 +13,12 @@ const CakeDetails = (props) => {
     }
 
     const addToFavourite = () => {
-        localStorage.setItem(props.cake.name, {
+        localStorage.setItem(props.cake.name,JSON.stringify({
             name: props.cake.name,
             comment: props.cake.comment,
             url: props.cake.url,
             yumFactor: props.cake.yumFactor 
-        })
+        }))
         alert(props.cake.name + " has been added to your favourites")
     }
 
