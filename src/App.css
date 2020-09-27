@@ -95,6 +95,8 @@ li.component-item {
 
 .favcake-item {
   padding: 1rem;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 input {

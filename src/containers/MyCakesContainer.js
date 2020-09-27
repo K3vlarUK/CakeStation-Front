@@ -20,11 +20,6 @@ class MyCakesContainer extends Component {
         })
     }
 
-    removeFromStorage(key){
-        localStorage.removeItem(key)
-        alert(key + "Has been removed from your list")
-    }
-
     render() { 
         return ( 
             <div>
@@ -34,7 +29,6 @@ class MyCakesContainer extends Component {
                         <div className="favcake-item" key={item.name}>
                             <img src={item.url} alt={item.name} />
                             <p>{item.name}</p>
-                            <button type="button" onClick={this.removeFromStorage(item.name)}>Remove from favourites</button>
                         </div>
                     ))}
                 </div>
