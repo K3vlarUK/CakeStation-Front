@@ -87,6 +87,17 @@ li.component-item {
   display: inline;
 }
 
+.favourite-cakes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.favcake-item {
+  display: inline;
+  padding: 1rem;
+}
+
 input {
   margin: 0.5rem;
   padding: 0.25rem;

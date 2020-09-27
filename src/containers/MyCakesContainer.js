@@ -23,11 +23,14 @@ class MyCakesContainer extends Component {
         return ( 
             <div>
                 <h2>My Favourite Cakes</h2>
-                <ul className="component-list">
+                <div className="favorite-cakes">
                     {this.state.favCakes.map(item => (
-                        <li className="component-item" key={item.name}>{item.name}</li>
+                        <div className="favcake-item" key={item.name}>
+                            <img src={item.url} alt={item.name} />
+                            <p>{item.name}</p>
+                        </div>
                     ))}
-                </ul>
+                </div>
             </div>
          );
     }
