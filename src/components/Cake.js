@@ -7,7 +7,7 @@ const Cake = ({cake}) => {
         return "Loading..."
     }
 
-    const url = 'https://cakestation-backend.herokuapp.com/cakes/' + cake.id;
+    const url = '/cakes/' + cake.id;
 
     return ( 
         <Fragment>
