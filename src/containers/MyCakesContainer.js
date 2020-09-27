@@ -11,7 +11,8 @@ class MyCakesContainer extends Component {
     componentDidMount() {
         const favourtieCakes = [];
         Object.keys(localStorage).forEach(function(key){
-            favourtieCakes.push(localStorage.getItem(key))
+            let retrievedEntry = localStorage.getItem(key)
+            favourtieCakes.push(JSON.parse(retrievedEntry))
         })
         this.setState({
             favCakes: favourtieCakes
