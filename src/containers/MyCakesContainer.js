@@ -24,7 +24,7 @@ class MyCakesContainer extends Component {
             <div>
                 <h2>My Favourite Cakes</h2>
                 <ul>
-                    {this.state.list.map(item => (
+                    {this.state.favCakes.map(item => (
                         <li key={item.name}>{item.name}</li>
                     ))}
                 </ul>
