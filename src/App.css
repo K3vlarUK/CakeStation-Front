@@ -89,6 +89,7 @@ li.component-item {
 
 .favourite-cakes {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }

@@ -5,7 +5,8 @@ class MyCakesContainer extends Component {
         super(props);
         this.state = { 
             favCakes: []
-         }
+        }
+        this.removeFromStorage = this.removeFromStorage.bind(this)
     }
 
     componentDidMount() {
@@ -19,6 +20,11 @@ class MyCakesContainer extends Component {
         })
     }
 
+    removeFromStorage(key){
+        localStorage.removeItem(key)
+        alert(key + "Has been removed from your list")
+    }
+
     render() { 
         return ( 
             <div>
@@ -28,6 +34,7 @@ class MyCakesContainer extends Component {
                         <div className="favcake-item" key={item.name}>
                             <img src={item.url} alt={item.name} />
                             <p>{item.name}</p>
+                            <button type="button" onClick={this.removeFromStorage}>Remove from favourites</button>
                         </div>
                     ))}
                 </div>
