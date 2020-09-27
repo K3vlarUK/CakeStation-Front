@@ -23,8 +23,12 @@ class MyCakesContainer extends Component {
         return ( 
             <div>
                 <h2>My Favourite Cakes</h2>
-
-        </div>
+                <ul>
+                    {this.state.list.map(item => (
+                        <li key={item.name}>{item.name}</li>
+                    ))}
+                </ul>
+            </div>
          );
     }
 }
