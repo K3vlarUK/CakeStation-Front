@@ -10,7 +10,7 @@ class CreateCakeContainer extends Component {
 
     handleCakePost(cake){
         const request = new Request();
-        request.post('/cakes', cake).then(() => {
+        request.post('https://cakestation-backend.herokuapp.com/cakes', cake).then(() => {
             window.location = '/'
         })
     }

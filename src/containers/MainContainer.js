@@ -20,7 +20,7 @@ class MainContainer extends Component {
 
     componentDidMount() {
         const request = new Request();
-        request.get('/cakes').then((data) => {
+        request.get('https://cakestation-backend.herokuapp.com/cakes').then((data) => {
             this.setState({
                 cakes: data
             })
@@ -36,7 +36,7 @@ class MainContainer extends Component {
     
     handleDelete(id){
         const request = new Request()
-        const url = '/cakes/' + id;
+        const url = 'https://cakestation-backend.herokuapp.com/cakes/' + id;
         request.delete(url).then(()=>{
             window.location ='/cakes';
         });

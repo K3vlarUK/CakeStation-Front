@@ -11,7 +11,7 @@ class CakeEditFormContainer extends Component {
     handleCakeUpdate(cake){
         const request = new Request();
         console.log(cake);
-        request.put('/cakes/' + this.props.cake.id, cake).then(() => {
+        request.put('https://cakestation-backend.herokuapp.com/cakes/' + this.props.cake.id, cake).then(() => {
             window.location = '/cakes/' + this.props.cake.id
         })
     }
