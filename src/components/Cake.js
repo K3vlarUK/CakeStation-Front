@@ -7,10 +7,6 @@ const Cake = ({cake}) => {
         return "Loading..."
     }
 
-    const addToFavourite = (cake) => {
-        localStorage.setItem(cake.name, cake);
-    }
-
     const url = '/cakes/' + cake.id;
 
     return ( 
@@ -20,7 +16,6 @@ const Cake = ({cake}) => {
             <p><strong><i>Comments:</i></strong></p>
             <p>{cake.comment}</p>
             <p><strong><i>Yum Factor:</i></strong> {cake.yumfactor}</p>
-            <button className="favourite" onClick={addToFavourite(cake)}>Add To Favourites</button>
         </Fragment>
      );
 }
