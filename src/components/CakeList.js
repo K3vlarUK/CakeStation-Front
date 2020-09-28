@@ -14,9 +14,12 @@ const CakeList = (props) => {
     })
 
     return ( 
-        <ul className="component-list">
-            {cakes}
-        </ul>
+        <div>
+        <h4>Click on the cakes name to see more</h4>
+            <ul className="component-list">
+                {cakes}
+            </ul>
+        <div>
      );
 }
  
