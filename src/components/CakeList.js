@@ -19,7 +19,7 @@ const CakeList = (props) => {
             <ul className="component-list">
                 {cakes}
             </ul>
-        <div>
+        </div>
      );
 }
  
